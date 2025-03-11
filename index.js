@@ -69,7 +69,30 @@ async function sendDiscordMessage(guild, firefighters) {
       throw new Error(`Channel with ID ${channelId} not found`);
     }
 
-    const message = formatFirefighterMessage(firefighters);
+    // First, fetch all user IDs
+    const firefightersWithIds = await Promise.all(
+      firefighters.map(async (ff) => {
+        try {
+          const members = await guild.members.fetch({
+            query: ff.discord,
+            limit: 1,
+          });
+          const member = members.first();
+          return {
+            ...ff,
+            userId: member ? member.user.id : null,
+          };
+        } catch (error) {
+          console.warn(`Could not fetch user ID for ${ff.discord}`);
+          return {
+            ...ff,
+            userId: null,
+          };
+        }
+      })
+    );
+
+    const message = formatFirefighterMessage(firefightersWithIds);
     await channel.send(message);
     console.log("Message sent successfully to Discord channel");
   } catch (error) {
@@ -84,7 +107,8 @@ function formatFirefighterMessage(firefighters) {
   let message = `**🔥 Bombeiros da Semana (${dateRange}) 🔥**\n\n`;
 
   firefighters.forEach((ff) => {
-    message += `- **${ff.name}** (${ff.team}) - <@${ff.discord}>\n`;
+    const mention = ff.userId ? `<@${ff.userId}>` : ff.discord;
+    message += `- **${ff.name}** (${ff.team}) - ${mention}\n`;
   });
 
   message +=
