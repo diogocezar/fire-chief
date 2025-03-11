@@ -132,7 +132,7 @@ Crie um arquivo JSON (padrão: `data.json`) com a seguinte estrutura:
       {
         "name": "Adriano",
         "team": "Firmware",
-        "discord": "diogo.santos.v3"
+        "discord": "adriano.santos.v3"
       }
     ]
   }
