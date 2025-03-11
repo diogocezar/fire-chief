@@ -1,0 +1,34 @@
+[
+  {
+    "start": "2025-03-10",
+    "end": "2025-03-14",
+    "firefighters": [
+      {
+        "name": "Diogo Cezar",
+        "team": "Cloud",
+        "discord": "diogo.batista.v3"
+      },
+      {
+        "name": "Adriano",
+        "team": "Firmware",
+        "discord": "adriano.santos.v3"
+      }
+    ]
+  },
+  {
+    "start": "2025-03-17",
+    "end": "2025-03-21",
+    "firefighters": [
+      {
+        "name": "João",
+        "team": "Backend",
+        "discord": "joao.silva.v3"
+      },
+      {
+        "name": "Maria",
+        "team": "Frontend",
+        "discord": "maria.oliveira.v3"
+      }
+    ]
+  }
+]

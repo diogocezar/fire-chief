@@ -1,0 +1,27 @@
+{
+  "name": "labs-fire-chief",
+  "version": "1.0.0",
+  "description": "CLI tool to manage Discord firefighter role assignments",
+  "main": "index.js",
+  "bin": {
+    "fire-chief": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "node index.js --test",
+    "link": "npm link"
+  },
+  "keywords": [
+    "discord",
+    "cli",
+    "firefighter",
+    "role-management"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^13.1.0",
+    "discord.js": "^14.18.0",
+    "dotenv": "^16.4.7"
+  }
+}
