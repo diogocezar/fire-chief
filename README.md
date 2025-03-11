@@ -175,84 +175,103 @@ npm start -- --data caminho/para/seu/arquivo.json
 npm test
 ```
 
-### Usando como CLI Global
-
-Se você instalou a CLI globalmente:
-
-```
-fire-chief
-```
-
-Com opções:
-
-```
-fire-chief --data caminho/para/seu/arquivo.json --test
-```
-
 ## Ajuda
 
 ```
 fire-chief --help
 ```
 
-## Agendamento
+## Configuração do Agendamento
 
-Você pode configurar um cron job ou tarefa agendada para executar esta aplicação semanalmente.
+O Fire Chief pode ser configurado para executar automaticamente toda segunda-feira e quando o computador iniciar. Siga os passos abaixo para configurar:
 
-### Exemplo de Cron Job (Linux/macOS)
+### 1. Preparação dos Arquivos
 
-Para executar toda segunda-feira às 9:00:
-
-```
-0 9 * * 1 cd /caminho/para/labs-fire-chief && /usr/bin/node index.js >> /caminho/para/logs/fire-chief.log 2>&1
-```
-
-### Exemplo de Agendador de Tarefas (Windows)
-
-Crie um arquivo batch (ex: `executar-fire-chief.bat`):
-
-```batch
-@echo off
-cd C:\caminho\para\labs-fire-chief
-node index.js
+1. Certifique-se de que o arquivo `run-fire-chief.sh` está com permissão de execução:
+```bash
+chmod +x run-fire-chief.sh
 ```
 
-Em seguida, agende este arquivo batch para ser executado semanalmente usando o Agendador de Tarefas do Windows.
+2. Configure o arquivo `com.firechief.plist`:
+   - Abra o arquivo e substitua:
+     - `PATH_TO_SCRIPT` pelo caminho completo onde o projeto está instalado
+     - `USER_HOME_PATH` pelo caminho do seu diretório home (ex: /Users/seu_usuario)
 
-## Solução de Problemas
+3. Copie o arquivo de configuração do launchd:
+```bash
+cp com.firechief.plist ~/Library/LaunchAgents/
+```
 
-### Erros de Permissão
+### 2. Configuração do Serviço
 
-Se você encontrar erros como `Missing Access` ou `Missing Permissions`, verifique o seguinte:
+O serviço está configurado para executar:
+- Toda segunda-feira às 9:00
+- Quando o computador iniciar (caso tenha perdido a execução da segunda-feira)
 
-1. **Posição do Cargo do Bot**: 
-   - Vá para as configurações do servidor > Cargos
-   - Certifique-se de que o cargo do bot esteja **acima** do cargo "bombeiro" na hierarquia
-   - Arraste o cargo do bot para uma posição superior na lista
+Para alterar o horário de execução, modifique os valores no arquivo `com.firechief.plist`:
+- `Hour`: Hora de execução (0-23)
+- `Minute`: Minuto de execução (0-59)
+- `Weekday`: Dia da semana (0 = Domingo, 1 = Segunda, ..., 6 = Sábado)
 
-2. **Permissões do Bot**:
-   - Verifique se o bot tem todas as permissões necessárias:
-     - Gerenciar Cargos
-     - Enviar Mensagens
-     - Ler Histórico de Mensagens
-     - Ver Canais
-   - Você pode verificar/editar as permissões do bot nas configurações do servidor > Cargos > [cargo do bot]
+### 3. Gerenciamento do Serviço
 
-3. **Permissões do Canal**:
-   - Verifique se o bot tem permissão para enviar mensagens no canal específico
-   - Vá para as configurações do canal > Permissões
-   - Certifique-se de que o bot ou seu cargo tenha permissão para "Enviar Mensagens" nesse canal
+#### Ativar o serviço:
+```bash
+launchctl load ~/Library/LaunchAgents/com.firechief.plist
+```
 
-4. **Intents do Bot**:
-   - Verifique se você habilitou os "Privileged Gateway Intents" corretos no Portal de Desenvolvedores do Discord:
-     - Server Members Intent
-     - Message Content Intent
+#### Desativar o serviço:
+```bash
+launchctl unload ~/Library/LaunchAgents/com.firechief.plist
+```
 
-5. **Token Correto**:
-   - Verifique se o token no arquivo `.env` está correto e atualizado
-   - Se necessário, gere um novo token no Portal de Desenvolvedores do Discord
+#### Verificar status do serviço:
+```bash
+launchctl list | grep firechief
+```
 
-### Outros Problemas Comuns
+#### Executar manualmente:
+```bash
+launchctl start com.firechief
+```
 
-- **Usuários não encontrados**: Certifique-se de que o campo `discord` no arquivo de dados corresponda exatamente ao nome de usuário do Discord (não o apelido no servidor)
-- **Semana atual não encontrada**: Verifique se as datas no arquivo de dados estão no formato correto (AAAA-MM-DD) e se há uma entrada que inclui a data atual 
+### 4. Logs
+
+Os logs são salvos em dois arquivos:
+- `fire-chief.out`: Saídas normais do programa
+- `fire-chief.err`: Erros e mensagens de debug
+
+Para visualizar os logs:
+```bash
+# Ver saídas normais
+cat fire-chief.out
+
+# Ver erros
+cat fire-chief.err
+```
+
+### 5. Solução de Problemas
+
+1. Se o serviço não estiver executando:
+   - Verifique se o Node.js está instalado e atualizado
+   - Confirme se todas as variáveis de ambiente estão configuradas no `.env`
+   - Verifique os logs em `fire-chief.err`
+   - Confirme se os caminhos no `com.firechief.plist` estão corretos
+
+2. Para reiniciar o serviço após mudanças:
+```bash
+launchctl unload ~/Library/LaunchAgents/com.firechief.plist && launchctl load ~/Library/LaunchAgents/com.firechief.plist
+```
+
+3. Para testar o script manualmente:
+```bash
+./run-fire-chief.sh
+```
+
+### 6. Observações Importantes
+
+- O serviço usa Node.js v20 ou superior
+- Certifique-se de que o arquivo `.env` está configurado corretamente
+- O bot precisa ter as permissões adequadas no Discord
+- O computador precisa estar ligado no momento agendado para a execução
+- Todos os caminhos no arquivo plist devem ser absolutos (começando com /) 
