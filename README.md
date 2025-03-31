@@ -274,4 +274,77 @@ launchctl unload ~/Library/LaunchAgents/com.firechief.plist && launchctl load ~/
 - Certifique-se de que o arquivo `.env` está configurado corretamente
 - O bot precisa ter as permissões adequadas no Discord
 - O computador precisa estar ligado no momento agendado para a execução
-- Todos os caminhos no arquivo plist devem ser absolutos (começando com /) 
+- Todos os caminhos no arquivo plist devem ser absolutos (começando com /)
+
+## Configuração com Docker
+
+Além da configuração tradicional, você pode executar o Fire Chief em um contêiner Docker com agendamento automático para segunda-feira às 9:00.
+
+### Pré-requisitos para Docker
+
+- Docker
+- Docker Compose
+
+### Configuração do Docker
+
+1. Configure o arquivo `.env` com suas credenciais do Discord conforme explicado na seção "Configuração do arquivo .env".
+
+2. Execute o contêiner:
+   ```bash
+   docker-compose up -d
+   ```
+
+3. Para verificar os logs:
+   ```bash
+   # Ver os logs do contêiner
+   docker logs fire-chief
+   
+   # Ver os logs da aplicação
+   cat fire-chief.out
+   
+   # Ver os erros da aplicação
+   cat fire-chief.err
+   ```
+
+4. Para testar imediatamente (sem esperar pelo agendamento):
+   ```bash
+   # Execute este comando para rodar o script imediatamente
+   docker exec fire-chief /app/run-fire-chief.sh
+   
+   # Ou descomente a linha do comando no docker-compose.yml e execute:
+   # docker-compose up -d --force-recreate
+   ```
+
+5. Para parar o contêiner:
+   ```bash
+   docker-compose down
+   ```
+
+### Personalização do Agendamento no Docker
+
+Por padrão, o script no contêiner Docker é executado toda segunda-feira às 9:00. Para alterar este agendamento:
+
+1. Edite o Dockerfile:
+   ```
+   # Encontre esta linha
+   RUN echo "0 9 * * 1 /app/run-fire-chief.sh >> /app/fire-chief.out 2>> /app/fire-chief.err" > /etc/crontabs/root
+   
+   # Modifique o agendamento cron conforme necessário:
+   # Formato: minuto hora dia mês dia_semana
+   # Exemplo para terças-feiras às 10:30:
+   # RUN echo "30 10 * * 2 /app/run-fire-chief.sh >> /app/fire-chief.out 2>> /app/fire-chief.err" > /etc/crontabs/root
+   ```
+
+2. Reconstrua e reinicie o contêiner:
+   ```bash
+   docker-compose down
+   docker-compose up -d --build
+   ```
+
+### Observações sobre o Docker
+
+- O contêiner é configurado para reiniciar automaticamente, mesmo após reinicialização do sistema
+- Os arquivos de log são montados no host, então você pode visualizá-los fora do contêiner
+- O contêiner tem o horário configurado para America/Sao_Paulo
+- O contêiner usa Node.js 20 Alpine como base
+- O uso de Docker elimina a necessidade de configurar o launchd ou cron no sistema host 

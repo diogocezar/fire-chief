@@ -20,14 +20,14 @@
     "end": "2025-03-21",
     "firefighters": [
       {
-        "name": "Enio Amarantes",
+        "name": "Keven Miano",
         "team": "Cloud",
-        "discord": "enio.amarantes.v3_97933"
+        "discord": "keven.miano.v3"
       },
       {
-        "name": "Adriano Santos",
+        "name": "Cláudio Silva",
         "team": "Firmware",
-        "discord": "adriano.santos.v3"
+        "discord": "claudio.silva.v3"
       }
     ]
   },

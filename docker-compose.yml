@@ -1,0 +1,14 @@
+services:
+  fire-chief:
+    build:
+      context: .
+    image: diogocezar/fire-chief:latest
+    container_name: fire-chief
+    restart: unless-stopped
+    volumes:
+      - ./.env:/app/.env:ro
+      - ./data.json:/app/data.json:ro
+      - ./fire-chief.out:/app/fire-chief.out
+      - ./fire-chief.err:/app/fire-chief.err
+    environment:
+      - TZ=America/Sao_Paulo
