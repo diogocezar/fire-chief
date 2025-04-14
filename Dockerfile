@@ -21,11 +21,11 @@ COPY run-fire-chief-docker.sh /app/run-fire-chief.sh
 RUN chmod +x /app/run-fire-chief.sh
 
 # Add crontab file
-RUN echo "0 9 * * 1 /app/run-fire-chief.sh >> /app/fire-chief.out 2>> /app/fire-chief.err" > /etc/crontabs/root
+RUN echo "30 9 * * 1 /app/run-fire-chief.sh" > /etc/crontabs/root
 
 # Create a wrapper script to start cron daemon - with explicit write to file
 RUN echo '#!/bin/bash' > /app/start.sh
-RUN echo 'echo "Fire Chief container started. Will run every Monday at 9:00 AM."' >> /app/start.sh
+RUN echo 'echo "Fire Chief container started. Will run every Monday at 9:30 AM."' >> /app/start.sh
 RUN echo 'echo "Container started at $(date)"' >> /app/start.sh
 RUN echo 'crond -f -l 8' >> /app/start.sh
 RUN chmod +x /app/start.sh
