@@ -1,60 +1,12 @@
 [
   {
-    "start": "2025-04-21",
-    "end": "2025-04-25",
-    "firefighters": [
-      {
-        "name": "Enio Amarantes",
-        "team": "Cloud",
-        "discord": "enio.amarantes.v3_97933"
-      },
-      {
-        "name": "Adriano Santos",
-        "team": "Firmware",
-        "discord": "adriano.santos.v3"
-      }
-    ]
-  },
-  {
-    "start": "2025-04-28",
-    "end": "2025-05-02",
-    "firefighters": [
-      {
-        "name": "Keven Miano",
-        "team": "Cloud",
-        "discord": "keven.miano.v3"
-      },
-      {
-        "name": "Cláudio Silva",
-        "team": "Firmware",
-        "discord": "claudio.silva.v3"
-      }
-    ]
-  },
-  {
-    "start": "2025-05-05",
-    "end": "2025-05-09",
-    "firefighters": [
-      {
-        "name": "Gustavo Almeida",
-        "team": "Cloud",
-        "discord": "gustavo.almeida.v3"
-      },
-      {
-        "name": "Enio Amarantes",
-        "team": "Firmware",
-        "discord": "enio.amarantes.v3_97933"
-      }
-    ]
-  },
-  {
     "start": "2025-05-12",
     "end": "2025-05-16",
     "firefighters": [
       {
-        "name": "Felipe Bravo",
+        "name": "Adriano Santos",
         "team": "Cloud",
-        "discord": "felipe.santos.golfleet"
+        "discord": "adriano.santos.v3"
       },
       {
         "name": "Cláudio Silva",
@@ -68,9 +20,9 @@
     "end": "2025-05-23",
     "firefighters": [
       {
-        "name": "Adriano Santos",
+        "name": "Keven Miano",
         "team": "Cloud",
-        "discord": "adriano.santos.v3"
+        "discord": "keven.miano.v3"
       },
       {
         "name": "Enio Amarantes",
@@ -84,25 +36,9 @@
     "end": "2025-05-30",
     "firefighters": [
       {
-        "name": "Keven Miano",
+        "name": "Felipe Bravo",
         "team": "Cloud",
-        "discord": "keven.miano.v3"
-      },
-      {
-        "name": "Cláudio Silva",
-        "team": "Firmware",
-        "discord": "claudio.silva.v3"
-      }
-    ]
-  },
-  {
-    "start": "2025-06-02",
-    "end": "2025-06-06",
-    "firefighters": [
-      {
-        "name": "Gustavo Almeida",
-        "team": "Cloud",
-        "discord": "gustavo.almeida.v3"
+        "discord": "felipe.santos.golfleet"
       },
       {
         "name": "Adriano Santos",
@@ -112,8 +48,40 @@
     ]
   },
   {
+    "start": "2025-06-02",
+    "end": "2025-06-06",
+    "firefighters": [
+      {
+        "name": "Enio Amarantes",
+        "team": "Cloud",
+        "discord": "enio.amarantes.v3_97933"
+      },
+      {
+        "name": "Cláudio Silva",
+        "team": "Firmware",
+        "discord": "claudio.silva.v3"
+      }
+    ]
+  },
+  {
     "start": "2025-06-09",
     "end": "2025-06-13",
+    "firefighters": [
+      {
+        "name": "Keven Miano",
+        "team": "Cloud",
+        "discord": "keven.miano.v3"
+      },
+      {
+        "name": "Adriano Santos",
+        "team": "Firmware",
+        "discord": "adriano.santos.v3"
+      }
+    ]
+  },
+  {
+    "start": "2025-06-16",
+    "end": "2025-06-20",
     "firefighters": [
       {
         "name": "Felipe Bravo",
@@ -128,8 +96,8 @@
     ]
   },
   {
-    "start": "2025-06-16",
-    "end": "2025-06-20",
+    "start": "2025-06-23",
+    "end": "2025-06-27",
     "firefighters": [
       {
         "name": "Adriano Santos",
@@ -144,8 +112,8 @@
     ]
   },
   {
-    "start": "2025-06-23",
-    "end": "2025-06-27",
+    "start": "2025-06-30",
+    "end": "2025-07-04",
     "firefighters": [
       {
         "name": "Keven Miano",
@@ -156,22 +124,6 @@
         "name": "Enio Amarantes",
         "team": "Firmware",
         "discord": "enio.amarantes.v3_97933"
-      }
-    ]
-  },
-  {
-    "start": "2025-06-30",
-    "end": "2025-07-04",
-    "firefighters": [
-      {
-        "name": "Gustavo Almeida",
-        "team": "Cloud",
-        "discord": "gustavo.almeida.v3"
-      },
-      {
-        "name": "Adriano Santos",
-        "team": "Firmware",
-        "discord": "adriano.santos.v3"
       }
     ]
   },
@@ -185,9 +137,9 @@
         "discord": "felipe.santos.golfleet"
       },
       {
-        "name": "Cláudio Silva",
+        "name": "Adriano Santos",
         "team": "Firmware",
-        "discord": "claudio.silva.v3"
+        "discord": "adriano.santos.v3"
       }
     ]
   },
@@ -196,14 +148,14 @@
     "end": "2025-07-18",
     "firefighters": [
       {
-        "name": "Adriano Santos",
+        "name": "Enio Amarantes",
         "team": "Cloud",
-        "discord": "adriano.santos.v3"
+        "discord": "enio.amarantes.v3_97933"
       },
       {
-        "name": "Enio Amarantes",
+        "name": "Cláudio Silva",
         "team": "Firmware",
-        "discord": "enio.amarantes.v3_97933"
+        "discord": "claudio.silva.v3"
       }
     ]
   },
@@ -217,22 +169,6 @@
         "discord": "keven.miano.v3"
       },
       {
-        "name": "Cláudio Silva",
-        "team": "Firmware",
-        "discord": "claudio.silva.v3"
-      }
-    ]
-  },
-  {
-    "start": "2025-07-28",
-    "end": "2025-08-01",
-    "firefighters": [
-      {
-        "name": "Gustavo Almeida",
-        "team": "Cloud",
-        "discord": "gustavo.almeida.v3"
-      },
-      {
         "name": "Adriano Santos",
         "team": "Firmware",
         "discord": "adriano.santos.v3"
@@ -240,8 +176,8 @@
     ]
   },
   {
-    "start": "2025-08-04",
-    "end": "2025-08-08",
+    "start": "2025-07-28",
+    "end": "2025-08-01",
     "firefighters": [
       {
         "name": "Felipe Bravo",
@@ -256,8 +192,8 @@
     ]
   },
   {
-    "start": "2025-08-11",
-    "end": "2025-08-15",
+    "start": "2025-08-04",
+    "end": "2025-08-08",
     "firefighters": [
       {
         "name": "Adriano Santos",
@@ -272,8 +208,8 @@
     ]
   },
   {
-    "start": "2025-08-18",
-    "end": "2025-08-22",
+    "start": "2025-08-11",
+    "end": "2025-08-15",
     "firefighters": [
       {
         "name": "Keven Miano",
@@ -288,13 +224,13 @@
     ]
   },
   {
-    "start": "2025-08-25",
-    "end": "2025-08-29",
+    "start": "2025-08-18",
+    "end": "2025-08-22",
     "firefighters": [
       {
-        "name": "Gustavo Almeida",
+        "name": "Felipe Bravo",
         "team": "Cloud",
-        "discord": "gustavo.almeida.v3"
+        "discord": "felipe.santos.golfleet"
       },
       {
         "name": "Adriano Santos",
@@ -304,13 +240,13 @@
     ]
   },
   {
-    "start": "2025-09-01",
-    "end": "2025-09-05",
+    "start": "2025-08-25",
+    "end": "2025-08-29",
     "firefighters": [
       {
-        "name": "Felipe Bravo",
+        "name": "Enio Amarantes",
         "team": "Cloud",
-        "discord": "felipe.santos.golfleet"
+        "discord": "enio.amarantes.v3_97933"
       },
       {
         "name": "Cláudio Silva",
@@ -320,13 +256,29 @@
     ]
   },
   {
+    "start": "2025-09-01",
+    "end": "2025-09-05",
+    "firefighters": [
+      {
+        "name": "Keven Miano",
+        "team": "Cloud",
+        "discord": "keven.miano.v3"
+      },
+      {
+        "name": "Adriano Santos",
+        "team": "Firmware",
+        "discord": "adriano.santos.v3"
+      }
+    ]
+  },
+  {
     "start": "2025-09-08",
     "end": "2025-09-12",
     "firefighters": [
       {
-        "name": "Adriano Santos",
+        "name": "Felipe Bravo",
         "team": "Cloud",
-        "discord": "adriano.santos.v3"
+        "discord": "felipe.santos.golfleet"
       },
       {
         "name": "Enio Amarantes",
@@ -340,9 +292,9 @@
     "end": "2025-09-19",
     "firefighters": [
       {
-        "name": "Keven Miano",
+        "name": "Adriano Santos",
         "team": "Cloud",
-        "discord": "keven.miano.v3"
+        "discord": "adriano.santos.v3"
       },
       {
         "name": "Cláudio Silva",
@@ -356,14 +308,14 @@
     "end": "2025-09-26",
     "firefighters": [
       {
-        "name": "Gustavo Almeida",
+        "name": "Keven Miano",
         "team": "Cloud",
-        "discord": "gustavo.almeida.v3"
+        "discord": "keven.miano.v3"
       },
       {
-        "name": "Adriano Santos",
+        "name": "Enio Amarantes",
         "team": "Firmware",
-        "discord": "adriano.santos.v3"
+        "discord": "enio.amarantes.v3_97933"
       }
     ]
   },
@@ -377,9 +329,9 @@
         "discord": "felipe.santos.golfleet"
       },
       {
-        "name": "Enio Amarantes",
+        "name": "Adriano Santos",
         "team": "Firmware",
-        "discord": "enio.amarantes.v3_97933"
+        "discord": "adriano.santos.v3"
       }
     ]
   },
@@ -388,9 +340,9 @@
     "end": "2025-10-10",
     "firefighters": [
       {
-        "name": "Adriano Santos",
+        "name": "Enio Amarantes",
         "team": "Cloud",
-        "discord": "adriano.santos.v3"
+        "discord": "enio.amarantes.v3_97933"
       },
       {
         "name": "Cláudio Silva",
@@ -409,9 +361,9 @@
         "discord": "keven.miano.v3"
       },
       {
-        "name": "Enio Amarantes",
+        "name": "Adriano Santos",
         "team": "Firmware",
-        "discord": "enio.amarantes.v3_97933"
+        "discord": "adriano.santos.v3"
       }
     ]
   },
@@ -420,14 +372,14 @@
     "end": "2025-10-24",
     "firefighters": [
       {
-        "name": "Gustavo Almeida",
+        "name": "Felipe Bravo",
         "team": "Cloud",
-        "discord": "gustavo.almeida.v3"
+        "discord": "felipe.santos.golfleet"
       },
       {
-        "name": "Adriano Santos",
+        "name": "Enio Amarantes",
         "team": "Firmware",
-        "discord": "adriano.santos.v3"
+        "discord": "enio.amarantes.v3_97933"
       }
     ]
   },
@@ -436,9 +388,9 @@
     "end": "2025-10-31",
     "firefighters": [
       {
-        "name": "Felipe Bravo",
+        "name": "Adriano Santos",
         "team": "Cloud",
-        "discord": "felipe.santos.golfleet"
+        "discord": "adriano.santos.v3"
       },
       {
         "name": "Cláudio Silva",
@@ -452,9 +404,9 @@
     "end": "2025-11-07",
     "firefighters": [
       {
-        "name": "Adriano Santos",
+        "name": "Keven Miano",
         "team": "Cloud",
-        "discord": "adriano.santos.v3"
+        "discord": "keven.miano.v3"
       },
       {
         "name": "Enio Amarantes",
@@ -468,25 +420,9 @@
     "end": "2025-11-14",
     "firefighters": [
       {
-        "name": "Keven Miano",
+        "name": "Felipe Bravo",
         "team": "Cloud",
-        "discord": "keven.miano.v3"
-      },
-      {
-        "name": "Cláudio Silva",
-        "team": "Firmware",
-        "discord": "claudio.silva.v3"
-      }
-    ]
-  },
-  {
-    "start": "2025-11-17",
-    "end": "2025-11-21",
-    "firefighters": [
-      {
-        "name": "Gustavo Almeida",
-        "team": "Cloud",
-        "discord": "gustavo.almeida.v3"
+        "discord": "felipe.santos.golfleet"
       },
       {
         "name": "Adriano Santos",
@@ -496,8 +432,40 @@
     ]
   },
   {
+    "start": "2025-11-17",
+    "end": "2025-11-21",
+    "firefighters": [
+      {
+        "name": "Enio Amarantes",
+        "team": "Cloud",
+        "discord": "enio.amarantes.v3_97933"
+      },
+      {
+        "name": "Cláudio Silva",
+        "team": "Firmware",
+        "discord": "claudio.silva.v3"
+      }
+    ]
+  },
+  {
     "start": "2025-11-24",
     "end": "2025-11-28",
+    "firefighters": [
+      {
+        "name": "Keven Miano",
+        "team": "Cloud",
+        "discord": "keven.miano.v3"
+      },
+      {
+        "name": "Adriano Santos",
+        "team": "Firmware",
+        "discord": "adriano.santos.v3"
+      }
+    ]
+  },
+  {
+    "start": "2025-12-01",
+    "end": "2025-12-05",
     "firefighters": [
       {
         "name": "Felipe Bravo",
@@ -512,8 +480,8 @@
     ]
   },
   {
-    "start": "2025-12-01",
-    "end": "2025-12-05",
+    "start": "2025-12-08",
+    "end": "2025-12-12",
     "firefighters": [
       {
         "name": "Adriano Santos",
@@ -528,8 +496,8 @@
     ]
   },
   {
-    "start": "2025-12-08",
-    "end": "2025-12-12",
+    "start": "2025-12-15",
+    "end": "2025-12-19",
     "firefighters": [
       {
         "name": "Keven Miano",
@@ -540,22 +508,6 @@
         "name": "Enio Amarantes",
         "team": "Firmware",
         "discord": "enio.amarantes.v3_97933"
-      }
-    ]
-  },
-  {
-    "start": "2025-12-15",
-    "end": "2025-12-19",
-    "firefighters": [
-      {
-        "name": "Gustavo Almeida",
-        "team": "Cloud",
-        "discord": "gustavo.almeida.v3"
-      },
-      {
-        "name": "Adriano Santos",
-        "team": "Firmware",
-        "discord": "adriano.santos.v3"
       }
     ]
   },
@@ -569,9 +521,9 @@
         "discord": "felipe.santos.golfleet"
       },
       {
-        "name": "Cláudio Silva",
+        "name": "Adriano Santos",
         "team": "Firmware",
-        "discord": "claudio.silva.v3"
+        "discord": "adriano.santos.v3"
       }
     ]
   },
@@ -580,14 +532,14 @@
     "end": "2026-01-02",
     "firefighters": [
       {
-        "name": "Adriano Santos",
+        "name": "Enio Amarantes",
         "team": "Cloud",
-        "discord": "adriano.santos.v3"
+        "discord": "enio.amarantes.v3_97933"
       },
       {
-        "name": "Enio Amarantes",
+        "name": "Cláudio Silva",
         "team": "Firmware",
-        "discord": "enio.amarantes.v3_97933"
+        "discord": "claudio.silva.v3"
       }
     ]
   }
